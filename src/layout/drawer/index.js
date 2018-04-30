@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { uiToggleLeftNavigation } from 'reducers/ui/actions';
+import { uiToggleLeftNavigationClosed } from 'reducers/ui/actions';
 
 import Component from './component';
 
@@ -10,7 +10,7 @@ const mapStateToProps = ({ app: { ui: { leftNavigationActive } } }, { currentUrl
 });
 
 const mapDispatchToProps = dispatch => ({
-  uiToggleLeftNavigation: () => dispatch(uiToggleLeftNavigation()),
+  uiToggleLeftNavigationClosed: () => dispatch(uiToggleLeftNavigationClosed()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component);

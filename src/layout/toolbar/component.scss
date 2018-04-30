@@ -1,0 +1,13 @@
+@import '@material/layout-grid/variables';
+@import '@material/layout-grid/mixins';
+
+@media (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
+  .toolbar__icon {
+    display: none;
+  }
+}
+
+.toolbar__logo {
+  height: 32px;
+  margin: auto 0;
+}

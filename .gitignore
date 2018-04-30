@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# Jest cache directory
+jest_0
+
+# Build output
+build/
+dist/

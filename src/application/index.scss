@@ -1,0 +1,20 @@
+@import "@material/theme/_color-palette";
+
+$mdc-theme-secondary: $material-color-brown-600;
+$mdc-theme-primary: $material-color-red-a200;
+$mdc-theme-background: #fff;
+
+@import "@material/theme/mdc-theme";
+
+body {
+  margin: 0;
+}
+
+a {
+  color: $material-color-red-a200;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

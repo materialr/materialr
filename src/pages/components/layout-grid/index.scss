@@ -1,0 +1,19 @@
+@import "@material/theme/_color-palette";
+
+.demo-cell {
+  background-color: $material-color-red-a200;
+  color: #fff;
+  margin-bottom: 10px;
+
+  &--odd {
+    background-color: $material-color-brown-400;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+.demo-grid {
+  background-color: #ccc;
+}

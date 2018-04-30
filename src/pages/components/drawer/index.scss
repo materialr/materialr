@@ -1,0 +1,16 @@
+.drawer__sample {
+  display: flex;
+  background-color: #fcfcfc;
+
+  &__toolbar-holder {
+    flex-grow: 1;
+  }
+}
+
+.drawer__sample__temporary-drawer {
+  position: relative;
+}
+
+.sample-temporary-drawer {
+  position: absolute;
+}

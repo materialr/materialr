@@ -1,0 +1,37 @@
+@import "@material/theme/_color-palette";
+
+.card {
+  &__action {
+    &--full-bleed {
+      &:not(:disabled) {
+        background-color: $material-color-brown-50;
+      }
+    }
+  }
+
+  &__container {
+    width: 320px;
+
+    &--narrow {
+      width: 180px;
+    }
+  }
+
+  &__media {
+    background-image: url(https://lorempixel.com/960/540/abstract/);
+
+    &__content {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+
+  &__text {
+    padding: 0 1rem;
+
+    &--media {
+      color: #fff;
+    }
+  }
+}

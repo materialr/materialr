@@ -1,0 +1,16 @@
+@import '@material/layout-grid/variables';
+@import '@material/layout-grid/mixins';
+
+.drawer-permanent {
+  display: none;
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min(tablet)) {
+  .drawer-permanent {
+    display: inline-flex;
+  }
+
+  .drawer-temporary {
+    display: none;
+  }
+}

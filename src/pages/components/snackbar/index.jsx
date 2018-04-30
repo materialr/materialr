@@ -4,6 +4,7 @@ import { Body1, Headline2, Headline4, Headline6 } from '@materialr/typography';
 import React from 'react';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 
@@ -268,7 +269,10 @@ export default class extends React.Component {
         <Bash>$ npm install --save @materialr/snackbar</Bash>
 
         <Headline4>Basic</Headline4>
-        <Body1>A basic snackbar with a message.</Body1>
+        <Body1>
+          A basic snackbar with a message, the snackbar visibility should be handled by the
+          implementor, as in the example below.
+        </Body1>
         <Showcase>
           <Button disabled={shownBasic} onClick={toggleShownBasic}>Care</Button>
           {shownBasic && <Snackbar message="Is love, made visible" onHide={toggleShownBasic} />}
@@ -276,7 +280,10 @@ export default class extends React.Component {
         <Javascript>{basic}</Javascript>
 
         <Headline4>Align start</Headline4>
-        <Body1>A basic snackbar with a message aligned to the start.</Body1>
+        <Body1>
+          A basic snackbar with a message aligned to the start of the display area, this is done
+          by adding the <InlineCode>alignStart</InlineCode> prop.
+        </Body1>
         <Showcase>
           <Button disabled={shownAlignStart} onClick={toggleShownAlignStart}>Care</Button>
           {shownAlignStart &&
@@ -285,7 +292,10 @@ export default class extends React.Component {
         <Javascript>{alignStart}</Javascript>
 
         <Headline4>Timeout</Headline4>
-        <Body1>The timeout can be set in milliseconds.</Body1>
+        <Body1>
+          The timeout can be set in milliseconds and passed to the component via
+          the <InlineCode>timeout</InlineCode> prop.
+        </Body1>
         <Showcase>
           <Button disabled={shownTimeout} onClick={toggleShownTimeout}>Care</Button>
           {shownTimeout &&
@@ -298,7 +308,10 @@ export default class extends React.Component {
         <Javascript>{timeout}</Javascript>
 
         <Headline4>Action</Headline4>
-        <Body1>Add an action to a snackbar</Body1>
+        <Body1>
+          Add an action to a snackbar via the <InlineCode>actionHandler</InlineCode>
+          and <InlineCode>actionText</InlineCode> props.
+        </Body1>
         <Showcase column>
           <Button disabled={shownAction} onClick={toggleShownAction}>Care</Button>
           {shownAction &&
@@ -314,7 +327,10 @@ export default class extends React.Component {
 
         <Headline4>Multiline</Headline4>
         <Headline6>Basic</Headline6>
-        <Body1>Multiline text inside the snackbar.</Body1>
+        <Body1>
+          Multiline text inside the snackbar can be enabled through
+          the <InlineCode>multiline</InlineCode> prop.
+        </Body1>
         <Showcase>
           <Button disabled={shownMultilineBasic} onClick={toggleShownMultilineBasic}>Care</Button>
           {shownMultilineBasic &&
@@ -329,7 +345,10 @@ export default class extends React.Component {
         <Javascript>{multilineBasic}</Javascript>
 
         <Headline6>Action on bottom</Headline6>
-        <Body1>Multiline text inside the snackbar with the action button on the bottom.</Body1>
+        <Body1>
+          Multiline text inside the snackbar with the action button on the bottom through the use
+          of the <InlineCode>multilineActionOnBottom</InlineCode> prop.
+        </Body1>
         <Showcase>
           <Button disabled={shownMultilineBottom} onClick={toggleShownMultilineBottom}>Care</Button>
           {shownMultilineBottom &&
@@ -343,7 +362,6 @@ export default class extends React.Component {
             />}
         </Showcase>
         <Javascript>{multilineBottom}</Javascript>
-
       </React.Fragment>
     );
   }

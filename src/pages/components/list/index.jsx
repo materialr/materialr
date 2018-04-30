@@ -165,7 +165,7 @@ import { List, ListItem, ListItemSecondaryText } from '@materialr/list';
 import React from 'react';
 
 export default () => (
-  <List isTwoLineList>
+  <List twoLines>
     <ListItem>
       <ListItemText>
         Care
@@ -279,7 +279,13 @@ export default class extends React.Component {
         <Javascript>{graphicIcon}</Javascript>
 
         <Headline6>Avatars</Headline6>
-        <Body1>List items with avatar images as graphics.</Body1>
+        <Body1>
+          List items with avatar images as pooosed to icons.
+          Each <InlineCode>{'<ListItemGraphic />'}</InlineCode> requires
+          an <InlineCode>avatar</InlineCode> and <InlineCode>title</InlineCode> prop.
+          The <InlineCode>{'<List />'}</InlineCode> requires the <InlineCode>avatar</InlineCode>
+          {' '}prop as well.
+        </Body1>
         <Showcase block>
           <List className="demo-list" avatar>
             <ListItem>
@@ -295,7 +301,11 @@ export default class extends React.Component {
         <Javascript>{graphicAvatar}</Javascript>
 
         <Headline4>Meta</Headline4>
-        <Body1>An icon at the end of the list item.</Body1>
+        <Body1>
+          An icon can be added at the end of each list item by using
+          the <InlineCode>{'<ListItemMeta />'}</InlineCode> component. This component uses a
+          material icon, specified by the <InlineCode>icon</InlineCode> prop.
+        </Body1>
         <Showcase block>
           <List className="demo-list">
             <ListItem>
@@ -320,9 +330,12 @@ export default class extends React.Component {
         <Javascript>{meta}</Javascript>
 
         <Headline4>Multiline</Headline4>
-        <Body1>List items with two lines of text.</Body1>
+        <Body1>
+          List items with two lines of text. To apply the correct styling, add
+          the <InlineCode>twoLines</InlineCode> prop to the list item.
+        </Body1>
         <Showcase block>
-          <List className="demo-list" isTwoLineList>
+          <List className="demo-list" twoLines>
             <ListItem>
               <ListItemText>
                 Care
@@ -341,7 +354,6 @@ export default class extends React.Component {
 
         <Headline4>Dividers</Headline4>
         <Headline6>Basic</Headline6>
-        <Body1>List item dividers.</Body1>
         <Showcase block>
           <List className="demo-list">
             <ListItem>Care</ListItem>
@@ -364,6 +376,12 @@ export default class extends React.Component {
 
         <Headline4>Navigation</Headline4>
         <Headline6>Basic</Headline6>
+        <Body1>
+          Specifying an <InlineCode>href</InlineCode>, and
+          optional <InlineCode>anchorProps</InlineCode> props, and adding
+          the <InlineCode>display</InlineCode> prop of <InlineCode>nav</InlineCode>, a list item
+          will be an anchor.
+        </Body1>
         <Showcase block>
           <List className="demo-list" display="nav">
             <ListItem
@@ -383,7 +401,11 @@ export default class extends React.Component {
         <Javascript>{navigationBasic}</Javascript>
 
         <Headline6>Custom</Headline6>
-        <Body1>Custom anchor components for internal navigation</Body1>
+        <Body1>
+          A custom anchor components for internal navigation can be created by specifying
+          an <InlineCode>AnchorComponent</InlineCode> (React Component) to be used in place of a
+          standard <InlineCode>{'<a>'}</InlineCode> tag.
+        </Body1>
         <Showcase block>
           <List className="demo-list" display="nav">
             <ListItem AnchorComponent={Link} anchorProps={{ to: componentButton() }}>Care</ListItem>
@@ -393,7 +415,11 @@ export default class extends React.Component {
         <Javascript>{navigationCustom}</Javascript>
 
         <Headline4>Groups</Headline4>
-        <Body1>A good way to break up longer lists is through the use of groups.</Body1>
+        <Body1>
+          A good way to break up longer lists is through the use of groups.
+          A <InlineCode>{'<ListGroup />'}</InlineCode> should have
+          a <InlineCode>{'<ListGroupSubheader />'}</InlineCode>.
+        </Body1>
         <Showcase block>
           <ListGroup className="demo-list">
             <ListGroupSubheader title="Emotions" />

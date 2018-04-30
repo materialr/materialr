@@ -148,14 +148,17 @@ export default () => (
     <Headline4>Full Width</Headline4>
     <Body1>
       A full width <InlineCode>{'<TextField />'}</InlineCode> takes up the maximum amount of
-      horizontal space allowed.
+      horizontal space allowed, it is created by adding the <InlineCode>fullWidth</InlineCode> prop.
     </Body1>
     <Showcase><TextField fullWidth label="All the words" /></Showcase>
     <Javascript>{fullWidth}</Javascript>
 
     <Headline4>Helper Text</Headline4>
     <Headline6>Default</Headline6>
-    <Body1>By default, Helper Text is displayed when the field is in focus.</Body1>
+    <Body1>
+      By default, Helper Text is displayed when the field is in focus, and can be added via
+      the <InlineCode>helperText</InlineCode> prop.
+    </Body1>
     <Showcase block>
       <div className="page-textfield__input-wrapper">
         <TextField helperText="Please enter your name" label="Name" />
@@ -176,7 +179,10 @@ export default () => (
     <Javascript>{helperTextPersistent}</Javascript>
 
     <Headline6>Validation Message (HTML5)</Headline6>
-    <Body1>Helper Text can be used to show HTML5 validation errors</Body1>
+    <Body1>
+      Helper Text can be used to show HTML5 validation errors through the use of
+      the <InlineCode>helperTextValidationMessage</InlineCode> prop.
+    </Body1>
     <Showcase block>
       <div className="page-textfield__input-wrapper">
         <TextField
@@ -190,7 +196,11 @@ export default () => (
     <Javascript>{helperTextValidationMessageHTML5}</Javascript>
 
     <Headline6>Validation Message (Custom)</Headline6>
-    <Body1>Helper Text can be used to display custom validation messages</Body1>
+    <Body1>
+      Helper Text can be used to display custom validation messages by programatically controlling
+      the <InlineCode>valid</InlineCode> prop and setting
+      the <InlineCode>helperTextValidationMessage</InlineCode> prop.
+    </Body1>
     <Note>
       A combination of HTML5 validation and custom validation cannot be used. When
       the <InlineCode>valid</InlineCode> prop is set to a boolean value then only custom
@@ -209,7 +219,9 @@ export default () => (
     <Javascript>{helperTextValidationMessageCustom}</Javascript>
 
     <Headline4>Disabled</Headline4>
-    <Body1>An uneditable field.</Body1>
+    <Body1>
+      An uneditable field is created by adding a <InlineCode>disabled</InlineCode> prop.
+    </Body1>
     <Showcase block>
       <div className="page-textfield__input-wrapper">
         <TextField disabled label="Name" />
@@ -218,7 +230,10 @@ export default () => (
     <Javascript>{disabled}</Javascript>
 
     <Headline4>Box</Headline4>
-    <Body1>A box display can be used to make the field stand out more.</Body1>
+    <Body1>
+      A box display can be used to make the field stand out more by adding
+      the <InlineCode>box</InlineCode> prop.
+    </Body1>
     <Showcase block>
       <div className="page-textfield__input-wrapper">
         <TextField box label="Name" />
@@ -227,7 +242,10 @@ export default () => (
     <Javascript>{box}</Javascript>
 
     <Headline4>Outline</Headline4>
-    <Body1>An outline can be used to make the field stand out more.</Body1>
+    <Body1>
+      An outline can be used to make the field stand out more by adding
+      the <InlineCode>outline</InlineCode> prop.
+    </Body1>
     <Showcase block>
       <div className="page-textfield__input-wrapper">
         <TextField outlined label="Name" />
@@ -242,11 +260,17 @@ export default () => (
       or <InlineCode>outlined</InlineCode> prop.
     </Note>
     <Headline6>Align Start</Headline6>
-    <Body1>By default an icon is aligned to the start of the field.</Body1>
+    <Body1>
+      By default an icon is aligned to the start of the field and is added via
+      the <InlineCode>icon</InlineCode> prop.
+    </Body1>
     <Showcase><TextField icon="fingerprint" box label="Identifier" /></Showcase>
     <Javascript>{iconAlignStart}</Javascript>
     <Headline6>Align End</Headline6>
-    <Body1>An icon aligned to the end of the field.</Body1>
+    <Body1>
+      An icon is aligned to the end of the field through
+      the <InlineCode>iconAlignEnd</InlineCode> prop.
+    </Body1>
     <Showcase>
       <TextField icon="fingerprint" iconAlignEnd outlined label="Identifier" />
     </Showcase>

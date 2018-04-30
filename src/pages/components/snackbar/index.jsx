@@ -30,7 +30,7 @@ export default class extends React.Component {
     const { setActionHandled, state: { actionHandled, shown }, toggleShown } = this;
     return (
       <React.Fragment>
-        <Button disabled={shown} onClick={toggleShown}>Care</Button>
+        <Button disabled={shown} onClick={toggleShown} raised>Care</Button>
         {shown &&
           <Snackbar
             actionHandler={setActionHandled}
@@ -63,7 +63,7 @@ export default class extends React.Component {
     const { state: { shown }, toggleShown } = this;
     return (
       <React.Fragment>
-        <Button disabled={shown} onClick={toggleShown}>Care</Button>
+        <Button disabled={shown} onClick={toggleShown} raised>Care</Button>
         {shown &&
           <Snackbar alignStart message="Is love, made visible" onHide={toggleShown} />}
       </React.Fragment>
@@ -90,7 +90,7 @@ export default class extends React.Component {
     const { state: { shown }, toggleShown } = this;
     return (
       <React.Fragment>
-        <Button disabled={shown} onClick={toggleShown}>Care</Button>
+        <Button disabled={shown} onClick={toggleShown} raised>Care</Button>
         {shown &&
           <Snackbar message="Is love, made visible" onHide={toggleShown} />}
       </React.Fragment>
@@ -120,7 +120,7 @@ export default class extends React.Component {
     const { state: { shown }, toggleShown } = this;
     return (
       <React.Fragment>
-        <Button disabled={shown} onClick={toggleShown}>Care</Button>
+        <Button disabled={shown} onClick={toggleShown} raised>Care</Button>
         {shown &&
           <Snackbar actionText="Care" message={multilineText} multiline onHide={toggleShown} />}
       </React.Fragment>
@@ -150,7 +150,7 @@ export default class extends React.Component {
     const { state: { shown }, toggleShown } = this;
     return (
       <React.Fragment>
-        <Button disabled={shown} onClick={toggleShown}>Care</Button>
+        <Button disabled={shown} onClick={toggleShown} raised>Care</Button>
         {shown &&
           <Snackbar
             actionText="Care"
@@ -186,7 +186,7 @@ export default class extends React.Component {
     const { state: { shown }, toggleShown } = this;
     return (
       <React.Fragment>
-        <Button disabled={shown} onClick={toggleShown}>Care</Button>
+        <Button disabled={shown} onClick={toggleShown} raised>Care</Button>
         {shown &&
           <Snackbar message="Is love, made visible" onHide={toggleShown} timeout={500} />}
       </React.Fragment>
@@ -274,7 +274,7 @@ export default class extends React.Component {
           implementor, as in the example below.
         </Body1>
         <Showcase>
-          <Button disabled={shownBasic} onClick={toggleShownBasic}>Care</Button>
+          <Button disabled={shownBasic} onClick={toggleShownBasic} raised>Care</Button>
           {shownBasic && <Snackbar message="Is love, made visible" onHide={toggleShownBasic} />}
         </Showcase>
         <Javascript>{basic}</Javascript>
@@ -285,7 +285,7 @@ export default class extends React.Component {
           by adding the <InlineCode>alignStart</InlineCode> prop.
         </Body1>
         <Showcase>
-          <Button disabled={shownAlignStart} onClick={toggleShownAlignStart}>Care</Button>
+          <Button disabled={shownAlignStart} onClick={toggleShownAlignStart} raised>Care</Button>
           {shownAlignStart &&
             <Snackbar alignStart message="Is love, made visible" onHide={toggleShownAlignStart} />}
         </Showcase>
@@ -297,7 +297,7 @@ export default class extends React.Component {
           the <InlineCode>timeout</InlineCode> prop.
         </Body1>
         <Showcase>
-          <Button disabled={shownTimeout} onClick={toggleShownTimeout}>Care</Button>
+          <Button disabled={shownTimeout} onClick={toggleShownTimeout} raised>Care</Button>
           {shownTimeout &&
             <Snackbar
               message="Is love, made visible"
@@ -313,7 +313,7 @@ export default class extends React.Component {
           and <InlineCode>actionText</InlineCode> props.
         </Body1>
         <Showcase column>
-          <Button disabled={shownAction} onClick={toggleShownAction}>Care</Button>
+          <Button disabled={shownAction} onClick={toggleShownAction} raised>Care</Button>
           {shownAction &&
             <Snackbar
               actionHandler={setActionHandled}
@@ -332,7 +332,13 @@ export default class extends React.Component {
           the <InlineCode>multiline</InlineCode> prop.
         </Body1>
         <Showcase>
-          <Button disabled={shownMultilineBasic} onClick={toggleShownMultilineBasic}>Care</Button>
+          <Button
+            disabled={shownMultilineBasic}
+            onClick={toggleShownMultilineBasic}
+            raised
+          >
+            Care
+          </Button>
           {shownMultilineBasic &&
             <Snackbar
               actionHandler={() => {}}
@@ -350,7 +356,13 @@ export default class extends React.Component {
           of the <InlineCode>multilineActionOnBottom</InlineCode> prop.
         </Body1>
         <Showcase>
-          <Button disabled={shownMultilineBottom} onClick={toggleShownMultilineBottom}>Care</Button>
+          <Button
+            disabled={shownMultilineBottom}
+            onClick={toggleShownMultilineBottom}
+            raised
+          >
+            Care
+          </Button>
           {shownMultilineBottom &&
             <Snackbar
               actionHandler={() => {}}

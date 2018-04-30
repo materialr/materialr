@@ -37,7 +37,7 @@
     "@materialr/list": "^2.0.1",
     "@materialr/radio": "^1.0.2",
     "@materialr/select": "^2.0.1",
-    "@materialr/snackbar": "0.1.4",
+    "@materialr/snackbar": "0.1.5",
     "@materialr/switch": "^2.0.1",
     "@materialr/textfield": "^2.0.1",
     "@materialr/toolbar": "^1.0.1",

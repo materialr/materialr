@@ -3,6 +3,7 @@ import { Body1, Headline2, Headline4 } from '@materialr/typography';
 import React from 'react';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 
@@ -62,7 +63,10 @@ export default class extends React.Component {
         <Bash>$ npm install --save @materialr/switch</Bash>
 
         <Headline4>Basic</Headline4>
-        <Body1>A switch with a label</Body1>
+        <Body1>
+          A switch with a label, switches need to be programatically controlled by using
+          the <InlineCode>checked</InlineCode> and <InlineCode>onChange</InlineCode> props.
+        </Body1>
         <Showcase column>
           <Switch
             checked={this.state.checked}
@@ -75,7 +79,9 @@ export default class extends React.Component {
         <Javascript>{basic}</Javascript>
 
         <Headline4>Disabled</Headline4>
-        <Body1>A switch without a label</Body1>
+        <Body1>
+          A switch can be disabled by adding the <InlineCode>disabled</InlineCode> prop.
+        </Body1>
         <Showcase>
           <Switch disabled label="Hate" name="demo-switch" />
         </Showcase>

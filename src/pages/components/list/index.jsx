@@ -280,7 +280,7 @@ export default class extends React.Component {
 
         <Headline6>Avatars</Headline6>
         <Body1>
-          List items with avatar images as pooosed to icons.
+          List items with avatar images as opposed to icons.
           Each <InlineCode>{'<ListItemGraphic />'}</InlineCode> requires
           an <InlineCode>avatar</InlineCode> and <InlineCode>title</InlineCode> prop.
           The <InlineCode>{'<List />'}</InlineCode> requires the <InlineCode>avatar</InlineCode>

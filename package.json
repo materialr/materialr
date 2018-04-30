@@ -17,9 +17,9 @@
     "test": "npm run lint && npm run test:vulnerabilities && npm run test:scripts",
     "test:scripts": "jest --coverage --config=./jest.config.json",
     "test:vulnerabilities": "nsp check",
-    "webpack": "NODE_ENV=prod webpack --config=./.webpack/webpack.config.prod.js",
+    "webpack": "NODE_ENV=production webpack --config=./.webpack/webpack.config.prod.js",
     "webpack:vendor": "webpack --config=./.webpack/webpack.config.dll.js",
-    "webpack:vendor:prod": "NODE_ENV=prod webpack --config=./.webpack/webpack.config.prod.dll.js"
+    "webpack:vendor:prod": "NODE_ENV=production webpack --config=./.webpack/webpack.config.prod.dll.js"
   },
   "keywords": [],
   "private": true,

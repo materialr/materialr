@@ -38,6 +38,7 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin([
       { from: 'assets', to: 'assets' },
+      { from: 'github-pages.js', to: 'github-pages.js' },
       { from: 'google-analytics.js', to: 'google-analytics.js' },
       { from: 'service-worker.js', to: 'service-worker.js' },
     ]),

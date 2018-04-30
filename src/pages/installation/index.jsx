@@ -65,7 +65,7 @@ export default () => (
       <a href="https://material.io/icons/" rel="noopener noreferrer" target="_blank">
         Material Icons
       </a>.
-      {' '}It is also suggested to add the
+      {' '}It is also suggests to add the
       appropriate <InlineCode>viewport</InlineCode> meta tag. These all need to be added to
       the <InlineCode>{'<head>'}</InlineCode> section of your markup.
     </Body1>

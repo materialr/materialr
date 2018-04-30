@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withRouter } from 'react-router';
 
-class ScrollRestoration extends React.Component {
+export class GoogleAnalytics extends React.Component {
   componentDidUpdate(prevProps) {
     const { pathname } = this.props.location;
     if (pathname !== prevProps.location.pathname) {
@@ -14,16 +14,16 @@ class ScrollRestoration extends React.Component {
   }
 }
 
-ScrollRestoration.propTypes = {
+GoogleAnalytics.propTypes = {
   children: PropTypes.node,
   location: PropTypes.shape({
     pathname: PropTypes.string,
   }),
 };
 
-ScrollRestoration.defaultProps = {
-  children: undefined,
+GoogleAnalytics.defaultProps = {
+  children: null,
   location: {},
 };
 
-export default withRouter(ScrollRestoration);
+export default withRouter(GoogleAnalytics);

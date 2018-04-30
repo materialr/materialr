@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withRouter } from 'react-router';
 
-class ScrollRestoration extends React.Component {
+export class ScrollRestoration extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.location.pathname !== prevProps.location.pathname) {
       window.scrollTo(0, 0);
@@ -21,7 +21,7 @@ ScrollRestoration.propTypes = {
 };
 
 ScrollRestoration.defaultProps = {
-  children: undefined,
+  children: null,
   location: {},
 };
 

@@ -5,9 +5,9 @@ import { ConnectedRouter } from 'react-router-redux';
 
 import store, { history } from 'reducers/store';
 
-import GoogleAnalytics from './google-analytics';
+import Analytics from './google-analytics';
 import Routes from './routes';
-import ScrollRestoration from './scroll-restoration';
+import Scroll from './scroll-restoration';
 
 import './index.scss';
 
@@ -15,11 +15,11 @@ export default () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <AppContainer>
-        <ScrollRestoration>
-          <GoogleAnalytics>
+        <Scroll>
+          <Analytics>
             <Routes />
-          </GoogleAnalytics>
-        </ScrollRestoration>
+          </Analytics>
+        </Scroll>
       </AppContainer>
     </ConnectedRouter>
   </Provider>

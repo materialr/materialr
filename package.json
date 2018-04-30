@@ -12,10 +12,10 @@
   "scripts": {
     "lint": "eslint --ext .js --ext .jsx .",
     "postinstall": "rm -rf dist/ && npm run webpack:vendor",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --config=./.webpack/webpack.config.js",
     "test": "npm run lint && npm run test:scripts",
     "test:scripts": "jest --coverage --config=./jest.config.json",
-    "webpack:vendor": "webpack --config=./webpack.config.dll.js"
+    "webpack:vendor": "webpack --config=./.webpack/webpack.config.dll.js"
   },
   "keywords": [],
   "private": true,

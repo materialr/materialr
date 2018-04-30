@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const join = path.join.bind(null, __dirname);
+const join = path.join.bind(null, __dirname, '..');
 
 module.exports = {
   context: join('src'),

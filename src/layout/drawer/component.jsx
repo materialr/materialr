@@ -6,14 +6,14 @@ import List from './list';
 
 import './component.scss';
 
-const Drawer = ({ currentUrl, leftNavigationActive, uiToggleLeftNavigation }) => (
+const Drawer = ({ currentUrl, leftNavigationActive, uiToggleLeftNavigationClosed }) => (
   <React.Fragment>
     <PermanentDrawer className="drawer-permanent">
       <List currentUrl={currentUrl} />
     </PermanentDrawer>
     <TemporaryDrawer
       className="drawer-temporary"
-      onClose={uiToggleLeftNavigation}
+      onClose={uiToggleLeftNavigationClosed}
       open={leftNavigationActive}
     >
       <List currentUrl={currentUrl} />
@@ -24,7 +24,7 @@ const Drawer = ({ currentUrl, leftNavigationActive, uiToggleLeftNavigation }) =>
 Drawer.propTypes = {
   currentUrl: PropTypes.string.isRequired,
   leftNavigationActive: PropTypes.bool,
-  uiToggleLeftNavigation: PropTypes.func.isRequired,
+  uiToggleLeftNavigationClosed: PropTypes.func.isRequired,
 };
 
 Drawer.defaultProps = {

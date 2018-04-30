@@ -4,14 +4,14 @@ import React from 'react';
 
 import './component.scss';
 
-const LayoutToolbar = ({ uiToggleLeftNavigation }) => (
+const LayoutToolbar = ({ uiToggleLeftNavigationOpen }) => (
   <Toolbar>
     <ToolbarRow>
       <ToolbarSection alignStart shrinkToFit>
         <ToolbarIcon
           className="toolbar__icon"
           icon="menu"
-          onClick={uiToggleLeftNavigation}
+          onClick={uiToggleLeftNavigationOpen}
           title="Menu"
         />
       </ToolbarSection>
@@ -24,7 +24,7 @@ const LayoutToolbar = ({ uiToggleLeftNavigation }) => (
 );
 
 LayoutToolbar.propTypes = {
-  uiToggleLeftNavigation: PropTypes.func.isRequired,
+  uiToggleLeftNavigationOpen: PropTypes.func.isRequired,
 };
 
 export default LayoutToolbar;

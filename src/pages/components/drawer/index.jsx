@@ -55,9 +55,9 @@ export class extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
-    this.toggleOpened = this.toggleOpened.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
-  toggleOpened() {
+  toggle() {
     this.setState({ open: !this.state.open });
   }
   render() {
@@ -67,7 +67,7 @@ export class extends React.Component {
           {/* Drawer content */}
         </PersistentDrawer>
         <div className="drawer__sample__toolbar-holder">
-          {/* Toolbar - button 'onClick' calls 'toggleOpened' */}
+          {/* Toolbar - button 'onClick' calls 'toggle' */}
           {/* Page content */}
         </div>
       </div>
@@ -84,19 +84,23 @@ export class extends React.Component {
   constructor(props) {
     super(props);
     this.state = { open: false };
-    this.toggleOpened = this.toggleOpened.bind(this);
+    this.close = this.close.bind(this);
+    this.open = this.open.bind(this);
   }
-  toggleOpened() {
-    this.setState({ open: !this.state.open });
+  close() {
+    this.setState({ open: false });
+  }
+  open() {
+    this.setState({ open: true });
   }
   render() {
     return (
       <div className="drawer__sample">
-        <TemporaryDrawer open={this.state.open} onClose={this.toggleOpened}>
+        <TemporaryDrawer onClose={this.close} open={this.state.open}>
           {/* Drawer content */}
         </TemporaryDrawer>
         <div className="drawer__sample__toolbar-holder">
-          {/* Toolbar - button 'onClick' calls 'toggleOpened' */}
+          {/* Toolbar - button 'onClick' calls 'open' */}
           {/* Page content */}
         </div>
       </div>
@@ -113,13 +117,17 @@ export default class extends React.Component {
       temporaryIsOpen: false,
     };
     this.persistentToggle = this.persistentToggle.bind(this);
-    this.temporaryToggle = this.temporaryToggle.bind(this);
+    this.temporaryClose = this.temporaryClose.bind(this);
+    this.temporaryOpen = this.temporaryOpen.bind(this);
   }
   persistentToggle() {
     this.setState({ persistentIsOpen: !this.state.persistentIsOpen });
   }
-  temporaryToggle() {
-    this.setState({ temporaryIsOpen: !this.state.temporaryIsOpen });
+  temporaryClose() {
+    this.setState({ temporaryIsOpen: false });
+  }
+  temporaryOpen() {
+    this.setState({ temporaryIsOpen: true });
   }
   render() {
     return (
@@ -210,12 +218,12 @@ export default class extends React.Component {
             <TemporaryDrawer
               className="sample-temporary-drawer"
               open={this.state.temporaryIsOpen}
-              onClose={this.temporaryToggle}
+              onClose={this.temporaryClose}
             >
               <DrawerContent hasHeader />
             </TemporaryDrawer>
             <div className="drawer__sample__toolbar-holder">
-              <Toolbar hasIcon onClick={this.temporaryToggle} />
+              <Toolbar hasIcon onClick={this.temporaryOpen} />
               <PageContent />
             </div>
           </div>

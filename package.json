@@ -10,12 +10,15 @@
     }
   ],
   "scripts": {
+    "build": "npm run webpack:vendor:prod && npm run webpack",
     "lint": "eslint --ext .js --ext .jsx .",
     "postinstall": "rm -rf dist/ && npm run webpack:vendor",
     "start": "webpack-dev-server --config=./.webpack/webpack.config.js",
     "test": "npm run lint && npm run test:scripts",
     "test:scripts": "jest --coverage --config=./jest.config.json",
-    "webpack:vendor": "webpack --config=./.webpack/webpack.config.dll.js"
+    "webpack": "NODE_ENV=prod webpack --config=./.webpack/webpack.config.prod.js",
+    "webpack:vendor": "webpack --config=./.webpack/webpack.config.dll.js",
+    "webpack:vendor:prod": "NODE_ENV=prod webpack --config=./.webpack/webpack.config.prod.dll.js"
   },
   "keywords": [],
   "private": true,
@@ -79,6 +82,7 @@
     "postcss-loader": "^2.1.4",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
   }

@@ -3,6 +3,7 @@ import { Body1, Headline2, Headline4 } from '@materialr/typography';
 import React from 'react';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 
@@ -119,28 +120,39 @@ export default class extends React.Component {
         <Bash>$ npm install --save @materialr/linear-progress</Bash>
 
         <Headline4>Determinate</Headline4>
-        <Body1>When the amount of progress is known</Body1>
+        <Body1>
+          When the amount of progress is known it can be shown by setting
+          the <InlineCode>progress</InlineCode> prop to a number between <em>0</em> and <em>1</em>.
+        </Body1>
         <Showcase>
           <LinearProgress progress={progressDeterminate / 100} />
         </Showcase>
         <Javascript>{determinate}</Javascript>
 
         <Headline4>Buffer</Headline4>
-        <Body1>A linear progress bar with a buffer.</Body1>
+        <Body1>
+          A linear progress bar with a buffer where the <InlineCode>buffer</InlineCode> prop
+          is between <em>0</em> and <em>1</em>.
+        </Body1>
         <Showcase>
           <LinearProgress buffer={bufferBuffer / 100} progress={progressBuffer / 100} />
         </Showcase>
         <Javascript>{buffer}</Javascript>
 
         <Headline4>Indeterminate</Headline4>
-        <Body1>When the progress amount is unknown.</Body1>
+        <Body1>
+          When the progress amount is unknown the <InlineCode>indeterminate</InlineCode> prop can
+          be added.
+        </Body1>
         <Showcase>
           <LinearProgress indeterminate />
         </Showcase>
         <Javascript>{indeterminate}</Javascript>
 
         <Headline4>Reversed</Headline4>
-        <Body1>Any of the above linear progress components, reversed.</Body1>
+        <Body1>
+          Any of the above linear progress components, <InlineCode>reversed</InlineCode>.
+        </Body1>
         <Showcase>
           <LinearProgress
             buffer={bufferReversed / 100}

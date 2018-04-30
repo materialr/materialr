@@ -11,7 +11,7 @@ const basic = `
 import Checkbox from '@materialr/checkbox';
 import React from 'react';
 
-export default () => <Checkbox label="Care" name="sample-checkbox" />
+export default () => <Checkbox label="Care" />
 `;
 
 const disabled = `
@@ -35,9 +35,9 @@ export default () => (
     <Bash>$ npm install --save @materialr/checkbox</Bash>
 
     <Headline4>Basic</Headline4>
-    <Body1>A basic checkbox</Body1>
+    <Body1>A basic checkbox requires at least a <InlineCode>label</InlineCode> prop.</Body1>
     <Showcase>
-      <Checkbox label="Care" name="sample-checkbox" />
+      <Checkbox label="Care" />
     </Showcase>
     <Javascript>{basic}</Javascript>
 

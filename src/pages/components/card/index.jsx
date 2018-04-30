@@ -87,6 +87,22 @@ export default () => (
 );
 `;
 
+const mediaContent = `
+import { Card, Media, MediaContent, MEDIA_ASPECT_RATIO_1_1 } from '@materialr/card';
+import React from 'react';
+
+export default () => (
+  <Card>
+    <Media aspectRatio={MEDIA_ASPECT_RATIO_1_1} className="card__media">
+      <MediaContent className="card__media__content">
+        {/* Media content */}
+      </MediaContent>
+    </Media>
+    {/* Card content */}
+  </Card>
+);
+`;
+
 const mediaSquare = `
 import { Card, Media, MEDIA_ASPECT_RATIO_1_1 } from '@materialr/card';
 import React from 'react';
@@ -153,7 +169,10 @@ export default () => (
     <Javascript>{basic}</Javascript>
 
     <Headline4>Outlined</Headline4>
-    <Body1>An outlined card is flush with the surface that it is on with a light border.</Body1>
+    <Body1>
+      An outlined card is flush with the surface that it is on with a light border.
+      This card type is created by adding the <InlineCode>outlined</InlineCode> prop.
+    </Body1>
     <Showcase>
       <div className="card__container">
         <Card outlined>
@@ -164,10 +183,14 @@ export default () => (
     <Javascript>{stroked}</Javascript>
 
     <Headline4>Media</Headline4>
+    <Body1>
+      Media can be added to a card in either square (1:1) or wide (16:9) aspect ratio by using the
+      named <InlineCode>{'<Media />'}</InlineCode> component.
+    </Body1>
     <Headline6>Wide (16:9)</Headline6>
     <Body1>
-      Media can be added to a card in either square or 16:9 aspect ratio. Text can also be added
-      over the media.
+      Wide (16:9) media is created by setting the <InlineCode>aspectRatio</InlineCode> prop
+      to <InlineCode>MEDIA_ASPECT_RATIO_16_9</InlineCode>, which is the default setting.
     </Body1>
     <Showcase>
       <div className="card__container">
@@ -180,13 +203,13 @@ export default () => (
     <Javascript>{mediaWide}</Javascript>
     <Note>
       A background image is added to the <InlineCode>{'<Media />'}</InlineCode> component by using
-      a <InlineCode>className</InlineCode> with some CSS.
+      a <InlineCode>className</InlineCode> prop with some CSS.
     </Note>
 
     <Headline6>Square</Headline6>
     <Body1>
-      Media can be added to a card in either square or 16:9 aspect ratio. Text can also be added
-      over the media.
+      Square (1:1) media is created by setting the <InlineCode>aspectRatio</InlineCode> prop
+      to <InlineCode>MEDIA_ASPECT_RATIO_1_1</InlineCode>
     </Body1>
     <Showcase>
       <div className="card__container--narrow">
@@ -199,7 +222,11 @@ export default () => (
     <Javascript>{mediaSquare}</Javascript>
 
     <Headline6>Media content</Headline6>
-    <Body1>Content can be added to the media</Body1>
+    <Body1>
+      Content can be added to the media by adding
+      a <InlineCode>{'<MediaContent />'}</InlineCode> component inside
+      the <InlineCode>{'<Media />'}</InlineCode> component.
+    </Body1>
     <Showcase>
       <div className="card__container--narrow">
         <Card>
@@ -211,11 +238,21 @@ export default () => (
         </Card>
       </div>
     </Showcase>
-    <Javascript>{mediaSquare}</Javascript>
+    <Javascript>{mediaContent}</Javascript>
 
     <Headline4>Actions</Headline4>
     <Headline6>Buttons and icons</Headline6>
-    <Body1>Action icons can be added to a card and will sit on the bottom right of the card</Body1>
+    <Body1>
+      Action buttons and icons can be added to a card and will sit on the bottom of the card.
+      All actions (buttons and images) need to be wrapped in
+      an <InlineCode>{'<Actions />'}</InlineCode> component.
+      All <InlineCode>{'<ActionButton />'}</InlineCode>s should all be wrapped
+      in an <InlineCode>{'<ActionButtons />'}</InlineCode> component and
+      all <InlineCode>{'<ActionIcon />'}</InlineCode> and{' '}
+      <InlineCode>{'<ActionIconToggle />'}</InlineCode> components should be wrapper in
+      a <InlineCode>{'<ActionIcons />'}</InlineCode> wrapper. These wrappers properly set the
+      alignment of the buttons and icons.
+    </Body1>
     <Showcase>
       <div className="card__container">
         <Card>
@@ -243,7 +280,9 @@ export default () => (
 
     <Headline6>Full bleed button</Headline6>
     <Body1>
-      A full bleed action button is a single button taking up the full width of the card
+      A full bleed action button is a single button taking up the full width of the card. It is
+      created by adding the <InlineCode>fullBleed</InlineCode> prop to
+      the <InlineCode>{'<Actions />'}</InlineCode> wrapper.
     </Body1>
     <Showcase>
       <div className="card__container">

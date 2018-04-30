@@ -3,6 +3,7 @@ import { Body1, Headline2, Headline4, Headline6 } from '@materialr/typography';
 import React from 'react';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 
@@ -105,7 +106,10 @@ const LayoutGrid = () => (
     <Bash>$ npm install --save @materialr/layout-grid</Bash>
 
     <Headline4>Basic</Headline4>
-    <Body1>A basic grid with each column specifying a size.</Body1>
+    <Body1>
+      A basic grid with each column specifying a size with the <InlineCode>columns</InlineCode>{' '}
+      prop.
+    </Body1>
     <Showcase block>
       <Grid className="demo-grid">
         <Row>
@@ -118,7 +122,11 @@ const LayoutGrid = () => (
     <Javascript>{basic}</Javascript>
 
     <Headline4>Device specific</Headline4>
-    <Body1>Device specific sizes affect the grid on individual device sizes.</Body1>
+    <Body1>
+      Device specific sizes affect the grid on individual device sizes and can be set using
+      the <InlineCode>desktop</InlineCode>, <InlineCode>tablet</InlineCode>{' '}
+      and <InlineCode>phone</InlineCode> props.
+    </Body1>
     <Showcase block>
       <Grid className="demo-grid">
         <Row>
@@ -147,10 +155,12 @@ const LayoutGrid = () => (
     <Javascript>{deviceSpecific}</Javascript>
 
     <Headline4>Grid alignment</Headline4>
-    <Body1>The entire grid can be aligned either to the left or to the right.</Body1>
+    <Body1>
+      The entire grid can be aligned either to the left or to the right by setting
+      the <InlineCode>align</InlineCode> property.
+    </Body1>
 
     <Headline6>Left</Headline6>
-    <Body1>Align the full grid to the left.</Body1>
     <Showcase>
       <Grid align="left" className="demo-grid">
         <Row>
@@ -163,7 +173,6 @@ const LayoutGrid = () => (
     <Javascript>{alignGridLeft}</Javascript>
 
     <Headline6>Right</Headline6>
-    <Body1>Align the full grid to the right.</Body1>
     <Showcase>
       <Grid align="right" className="demo-grid">
         <Row>
@@ -176,7 +185,10 @@ const LayoutGrid = () => (
     <Javascript>{alignGridRight}</Javascript>
 
     <Headline4>Cell alignment</Headline4>
-    <Body1>Cell content can be aligned vertically.</Body1>
+    <Body1>
+      Cells can be aligned vertically by using the <InlineCode>align</InlineCode> prop on
+      a <InlineCode>{'<Cell />'}</InlineCode> component.
+    </Body1>
     <Showcase block>
       <Grid className="demo-grid">
         <Row>

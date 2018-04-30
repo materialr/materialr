@@ -14,6 +14,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 import { componentButton, componentCard } from 'urls';
@@ -75,7 +76,7 @@ import { List, ListItem, ListItemGraphic } from '@materialr/list';
 import React from 'react';
 
 export default () => (
-  <List isAvatarList>
+  <List avatar>
     <ListItem>
       <ListItemGraphic avatar="https://lorempixel.com/56/56/animals" title="Care" />
       Care
@@ -250,7 +251,10 @@ export default class extends React.Component {
         <Javascript>{basic}</Javascript>
 
         <Headline4>Dense</Headline4>
-        <Body1>A dense list with list items.</Body1>
+        <Body1>
+          <em>Not as smart as other lists</em>. A dense list with list items, created by adding
+          the <InlineCode>dense</InlineCode> prop to the list.
+        </Body1>
         <Showcase block>
           <List className="demo-list" dense>
             <ListItem>Care</ListItem>
@@ -261,7 +265,11 @@ export default class extends React.Component {
 
         <Headline4>Graphic</Headline4>
         <Headline6>Icons</Headline6>
-        <Body1>List items with icons as list graphics.</Body1>
+        <Body1>
+          List items with icons as list graphics,
+          each <InlineCode>{'<ListItemGraphic />'}</InlineCode> uses a material icon, defined by
+          the <InlineCode>icon</InlineCode> prop.
+        </Body1>
         <Showcase block>
           <List className="demo-list">
             <ListItem><ListItemGraphic icon="favorite_outline" />Care</ListItem>
@@ -273,7 +281,7 @@ export default class extends React.Component {
         <Headline6>Avatars</Headline6>
         <Body1>List items with avatar images as graphics.</Body1>
         <Showcase block>
-          <List className="demo-list" isAvatarList>
+          <List className="demo-list" avatar>
             <ListItem>
               <ListItemGraphic avatar="https://lorempixel.com/56/56/animals" title="Care" />
               Care

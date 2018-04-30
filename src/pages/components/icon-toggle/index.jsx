@@ -3,6 +3,7 @@ import { Body1, Headline2, Headline4 } from '@materialr/typography';
 import React from 'react';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 
@@ -76,7 +77,9 @@ export default class extends React.Component {
         <Bash>$ npm install --save @materialr/icon-toggle</Bash>
 
         <Headline4>Basic</Headline4>
-        <Body1>A basic icon toggle implementation.</Body1>
+        <Body1>
+          A basic icon toggle with <em>on</em> and <em>off</em> states for their icons and labels.
+        </Body1>
         <Showcase column>
           <IconToggle
             iconOff="favorite_border"
@@ -90,7 +93,9 @@ export default class extends React.Component {
         <Javascript>{basic}</Javascript>
 
         <Headline4>Disabled</Headline4>
-        <Body1>A disabled icon toggle.</Body1>
+        <Body1>
+          By adding the <InlineCode>disabled</InlineCode> prop the icon toggle can be disabled.
+        </Body1>
         <Showcase column>
           <IconToggle
             disabled

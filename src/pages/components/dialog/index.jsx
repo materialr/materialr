@@ -221,7 +221,10 @@ export default class extends React.Component {
         <Bash>$ npm install --save @materialr/dialog</Bash>
 
         <Headline4>Basic</Headline4>
-        <Body1>A basic dialog has a title, some body text, and two action buttons.</Body1>
+        <Body1>
+          A basic dialog has a title, some body text, and two action buttons. Visibility should
+          be handled by the implementor as in the example below.
+        </Body1>
         <Showcase column>
           <Button onClick={this.basicShow} raised>Basic dialog</Button>
           <Body1>Action taken: <strong>{this.state.basicAction}</strong></Body1>

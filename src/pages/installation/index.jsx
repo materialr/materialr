@@ -75,8 +75,8 @@ export default () => (
     <Body1>
       The material components all use sass to compile their styles, this gives you the ability to
       theme your entire application. To this end you will
-      need <InlineCode>style-loader</InlineCode>, <InlineCode>css-loader</InlineCode>
-      and <InlineCode>sass-loader</InlineCode> installed.
+      need <InlineCode>style-loader</InlineCode>, <InlineCode>css-loader</InlineCode>,{' '}
+      <InlineCode>postcss-loader</InlineCode> and <InlineCode>sass-loader</InlineCode> installed.
     </Body1>
     <Bash>$ npm install --save-dev style-loader css-loader postcss-loader sass-loader</Bash>
     <Body1>

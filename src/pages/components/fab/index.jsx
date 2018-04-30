@@ -3,6 +3,7 @@ import { Body1, Headline2, Headline4 } from '@materialr/typography';
 import React from 'react';
 
 import Bash from 'shared/components/code-block/bash';
+import InlineCode from 'shared/components/code-block/inline-code';
 import Javascript from 'shared/components/code-block/javascript';
 import Showcase from 'shared/components/showcase';
 
@@ -74,21 +75,28 @@ export default class extends React.Component {
         <Bash>$ npm install --save @materialr/fab</Bash>
 
         <Headline4>Basic</Headline4>
-        <Body1>A basic FAB with only an icon.</Body1>
+        <Body1>
+          A basic FAB only needs an <InlineCode>icon</InlineCode> prop to be set to a material icon.
+        </Body1>
         <Showcase>
           <Fab icon="favorite" />
         </Showcase>
         <Javascript>{basic}</Javascript>
 
         <Headline4>Mini</Headline4>
-        <Body1>A smaller FAB</Body1>
+        <Body1>
+          A smaller version can be created by passing the <InlineCode>mini</InlineCode> prop.
+        </Body1>
         <Showcase>
           <Fab icon="favorite" mini />
         </Showcase>
         <Javascript>{mini}</Javascript>
 
         <Headline4>Exited</Headline4>
-        <Body1>Add an animation as the button exits stage left</Body1>
+        <Body1>
+          Add an animation as the button exits by adding the <InlineCode>exited</InlineCode> prop
+          programatically.
+        </Body1>
         <Showcase>
           <Fab exited={this.state.exited} icon="add" onClick={this.toggleExited} />
           <Fab exited={!this.state.exited} icon="clear" onClick={this.toggleExited} />
@@ -96,9 +104,12 @@ export default class extends React.Component {
         <Javascript>{exited}</Javascript>
 
         <Headline4>Ripple</Headline4>
-        <Body1>A ripple that starts from the current mouse pointer location</Body1>
+        <Body1>
+          A ripple that starts from the current mouse pointer location by adding
+          the <InlineCode>ripple</InlineCode> prop.
+        </Body1>
         <Showcase>
-          <Fab icon="favorite" rippleEnabled />
+          <Fab icon="favorite" ripple />
         </Showcase>
         <Javascript>{ripple}</Javascript>
       </React.Fragment>

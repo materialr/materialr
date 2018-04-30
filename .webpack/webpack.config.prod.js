@@ -39,6 +39,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'assets', to: 'assets' },
       { from: 'google-analytics.js', to: 'google-analytics.js' },
+      { from: 'service-worker.js', to: 'service-worker.js' },
     ]),
     new HtmlWebpackPlugin({ hash: true, template: 'index.html' }),
     new CSPWebpackPlugin({

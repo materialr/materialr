@@ -78,11 +78,11 @@ import React from 'react';
 export default () => (
   <List avatar>
     <ListItem>
-      <ListItemGraphic avatar="https://lorempixel.com/56/56/animals" title="Care" />
+      <ListItemGraphic avatar="https://lorempixel.com/56/56/animals/" title="Care" />
       Care
     </ListItem>
     <ListItem>
-      <ListItemGraphic avatar="https://lorempixel.com/56/56/animals" title="Love" />
+      <ListItemGraphic avatar="https://lorempixel.com/56/56/animals/" title="Love" />
       Love
     </ListItem>
   </List>
@@ -289,11 +289,11 @@ export default class extends React.Component {
         <Showcase block>
           <List className="demo-list" avatar>
             <ListItem>
-              <ListItemGraphic avatar="https://lorempixel.com/56/56/animals" title="Care" />
+              <ListItemGraphic avatar="https://lorempixel.com/56/56/animals/" title="Care" />
               Care
             </ListItem>
             <ListItem>
-              <ListItemGraphic avatar="https://lorempixel.com/56/56/animals" title="Love" />
+              <ListItemGraphic avatar="https://lorempixel.com/56/56/animals/" title="Love" />
               Love
             </ListItem>
           </List>

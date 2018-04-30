@@ -43,8 +43,8 @@ const listItems = [
   { graphic: 'border_bottom', locale: 'Snackbar', url: componentSnackbar() },
   { graphic: 'power_settings_new', locale: 'Switch', url: componentSwitch() },
   { graphic: 'text_format', locale: 'Text field', url: componentTextField() },
-  { graphic: 'text_fields', locale: 'Typography', url: componentTypography() },
   { graphic: 'border_top', locale: 'Toolbar', url: componentToolbar() },
+  { graphic: 'text_fields', locale: 'Typography', url: componentTypography() },
 ];
 
 const DrawerList = ({ currentUrl }) => (

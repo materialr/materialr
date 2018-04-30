@@ -43,7 +43,10 @@ module.exports = {
     publicPath: '/',
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: 'assets', to: 'assets' }]),
+    new CopyWebpackPlugin([
+      { from: 'assets', to: 'assets' },
+      { from: 'google-analytics.js', to: 'google-analytics.js' },
+    ]),
     new HtmlWebpackPlugin({ hash: true, template: 'index.html' }),
     new CSPWebpackPlugin({
       'base-uri': '\'self\'',
@@ -51,9 +54,9 @@ module.exports = {
       'default-src': '\'none\'',
       'font-src': ['\'self\'', 'https://fonts.gstatic.com'],
       'form-action': '\'none\'',
-      'img-src': ['\'self\'', 'https://lorempixel.com', 'data:'],
+      'img-src': ['\'self\'', 'https://lorempixel.com', 'data:', 'https://www.google-analytics.com'],
       'object-src': '\'none\'',
-      'script-src': ['\'self\''],
+      'script-src': ['\'self\'', 'https://www.google-analytics.com'],
       'style-src': ['\'self\'', '\'unsafe-inline\'', 'https://fonts.googleapis.com'],
     }),
     new webpack.DllReferencePlugin({

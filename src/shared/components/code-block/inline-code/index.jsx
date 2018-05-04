@@ -3,10 +3,10 @@ import React from 'react';
 
 import './index.scss';
 
-const InlineCode = ({ children }) => <span className="inline-code">{children}</span>;
+const InlineCode = ({ children }) => <span className="inline-code">{children.trim()}</span>;
 
 InlineCode.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.string.isRequired,
 };
 
 export default InlineCode;

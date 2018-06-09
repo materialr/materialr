@@ -8,6 +8,7 @@ module.exports = {
   context: join('src'),
   devtool: false,
   entry: ['./vendor.js'],
+  mode: 'production',
   module: {
     rules: [{
       exclude: [/node_modules/, /\.test\.jsx?$/],

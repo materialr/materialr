@@ -1,6 +1,6 @@
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CSPWebpackPlugin = require('csp-webpack-plugin');
+const CspHtmlWebpackPlugin = require('csp-html-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
@@ -22,6 +22,7 @@ module.exports = {
   },
   devtool: 'cheap-module-source-map',
   entry: ['react-hot-loader/patch', './index.jsx'],
+  mode: 'development',
   module: {
     rules: [{
       exclude: [/node_modules/, /\.test\.jsx?$/],
@@ -51,15 +52,15 @@ module.exports = {
       { from: 'service-worker.js', to: 'service-worker.js' },
     ]),
     new HtmlWebpackPlugin({ hash: true, template: 'index.html' }),
-    new CSPWebpackPlugin({
+    new CspHtmlWebpackPlugin({
       'base-uri': '\'self\'',
       'connect-src': ['\'self\'', 'ws://localhost:9999', 'ws://0.0.0.0:9999'],
       'default-src': '\'none\'',
       'font-src': ['\'self\'', 'https://fonts.gstatic.com'],
       'form-action': '\'none\'',
-      'img-src': ['\'self\'', 'https://lorempixel.com', 'data:', 'https://www.google-analytics.com'],
+      'img-src': ['\'self\'', 'https://lorempixel.com', 'data:', 'https://www.google-analytics.com', 'https://www.googletagmanager.com'],
       'object-src': '\'none\'',
-      'script-src': ['\'self\'', 'https://www.google-analytics.com'],
+      'script-src': ['\'self\'', 'https://www.google-analytics.com', 'https://www.googletagmanager.com'],
       'style-src': ['\'self\'', '\'unsafe-inline\'', 'https://fonts.googleapis.com'],
     }),
     new webpack.DllReferencePlugin({
